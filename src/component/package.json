@@ -1,28 +1,23 @@
 {
   "name": "react-imgfile",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "private": false,
-  "main": "compiled.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mathucate/react-imgfile"
+    "url": "git+https://github.com/mathucate/react-imgfile.git"
   },
   "dependencies": {
-    "react": ">=16.8.0",
-    "react-flip-move": "^3.0.3",
+    "immutability-helper": "^3.1.1",
     "react-dnd": "^14.0.2",
     "react-dnd-html5-backend": "^14.0.0"
   },
+  "peerDependencies": {
+    "react": ">= 16.14"
+  },
   "scripts": {
     "prepublishOnly": "npm run transpile",
-    "transpile": "babel index.js --out-file compiled.js"
-  },
-  "babel": {
-    "presets": [
-      "env",
-      "react",
-      "stage-2"
-    ]
+    "transpile": "babel src --out-dir dist"
   },
   "keywords": [
     "img",
@@ -36,9 +31,8 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1"
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
   }
 }

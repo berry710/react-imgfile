@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import "./index.css";
-import FlipMove from "react-flip-move";
 import UploadIcon from "./UploadIcon.svg";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
@@ -105,7 +104,7 @@ const ImgFileInput = (props) => {
       const reader = new FileReader();
 
       // Read the image via FileReader API and save image result in state.
-      reader.onload = function(e) {
+      reader.onload = function (e) {
         // Add the file name to the data URL
         let dataURL = e.target.result;
         dataURL = dataURL.replace(";base64", `;name=${file.name};base64`);
@@ -200,11 +199,7 @@ const ImgFileInput = (props) => {
    */
   const renderPreview = () => {
     return (
-      <div className='uploadPicturesWrapper'>
-        <FlipMove enterAnimation='fade' leaveAnimation='fade' style={styles}>
-          {renderPreviewPictures()}
-        </FlipMove>
-      </div>
+      <div className='uploadPicturesWrapper'>{renderPreviewPictures()}</div>
     );
   };
 

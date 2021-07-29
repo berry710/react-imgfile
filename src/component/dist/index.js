@@ -16,10 +16,6 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 require("./index.css");
 
-var _reactFlipMove = require("react-flip-move");
-
-var _reactFlipMove2 = _interopRequireDefault(_reactFlipMove);
-
 var _UploadIcon = require("./UploadIcon.svg");
 
 var _UploadIcon2 = _interopRequireDefault(_UploadIcon);
@@ -243,11 +239,7 @@ var ImgFileInput = function ImgFileInput(props) {
     return _react2.default.createElement(
       "div",
       { className: "uploadPicturesWrapper" },
-      _react2.default.createElement(
-        _reactFlipMove2.default,
-        { enterAnimation: "fade", leaveAnimation: "fade", style: styles },
-        renderPreviewPictures()
-      )
+      renderPreviewPictures()
     );
   };
 
