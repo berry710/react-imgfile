@@ -24,15 +24,13 @@ function App = (props) => {
     setFiles([...files]) // Array of file objects for FormData
   }
 
-  render() {
-    return (
-      <ImgFileInput
-        buttonText='Choose images'
-        onChange={onChange}
-        maxFileSize={5242880}
-      />
-    );
-  }
+  return (
+    <ImgFileInput
+      buttonText='Choose images'
+      onChange={onChange}
+      maxFileSize={5242880}
+    />
+  );
 }
 ```
 

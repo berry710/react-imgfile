@@ -13,7 +13,8 @@
     "react-dnd-html5-backend": "^14.0.0"
   },
   "peerDependencies": {
-    "react": ">= 16.14"
+    "react": ">= 16.14",
+    "react-dom": ">= 16.14"
   },
   "scripts": {
     "prepublishOnly": "npm run transpile",
